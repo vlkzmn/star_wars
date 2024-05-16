@@ -2,7 +2,7 @@
 
 The goal of the assignment is to create a web application that will allow users to view a list of Star Wars characters, as well as detailed information about the spaceships and movies associated with each character, using NextJS for the application structure and React Flow to visualize the information in the form of a graph.
 
-# [LIVE DEMO](https://star-wars-test-nine.vercel.app/)
+# [LIVE DEMO](https://star-wars-lime-chi.vercel.app/)
 
 # Technologies used
 
