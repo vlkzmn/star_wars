@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactFlow, { Background, Controls, useReactFlow } from 'reactflow';
 import {
   CustomCharacterNode,
@@ -18,8 +18,12 @@ import 'reactflow/dist/style.css';
 
 function SetFitView() {
   const reactFlow = useReactFlow();
-  setTimeout(reactFlow.fitView);
-  return <></>;
+
+  useEffect(() => {
+    setTimeout(reactFlow.fitView);
+  }, [reactFlow]);
+
+  return null;
 }
 
 /**

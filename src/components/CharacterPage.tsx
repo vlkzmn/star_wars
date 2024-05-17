@@ -31,8 +31,6 @@ export default async function CharacterPage({ id }: { id: string }) {
   const ships = await getStarShips(character.starships);
   const { nodes, edges } = generateNodes(character, films, ships);
 
-  const FlowNoSSR = dynamic(() => import('../components/Flow'), { ssr: false });
-
   return (
     <main className="flex flex-col md:flex-row gap-3">
       <div className="hidden md:flex md:w-1/4 rounded-lg flex-col justify-between gap-6 m-3 p-5 bg-stone-900">
@@ -47,7 +45,7 @@ export default async function CharacterPage({ id }: { id: string }) {
       </div>
 
       <div className="w-screen h-screen min-h-screen p-3 md:w-3/4">
-        <FlowNoSSR nodes={nodes} edges={edges} />
+        <Flow nodes={nodes} edges={edges} />
       </div>
     </main>
   );
